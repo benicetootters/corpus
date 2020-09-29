@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+  <Appenders>
+    <File name="File" fileName="/opt/tomcat8-default/logs/apps/corpus/datalog.txt">
+		<PatternLayout pattern="%d{yyyyMMdd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+	</File>
+  </Appenders>
+  <Loggers>
+    <logger name="edu.bowdoin.corpus" level="error" additivity="false">
+      <AppenderRef ref="File" level="error" />
+    </logger>
+  </Loggers>
+</Configuration>
