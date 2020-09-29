@@ -16,7 +16,7 @@
 
 	DataMethods dm = new DataMethods(ds,logger);
 	
-	Element works = dm.GetWorkPetia(wid);
+	Element works = dm.GetWorkPetia(wid); 
 	
 	//System.out.println(works.toXML());
 	Transformations t = new Transformations();

@@ -40,7 +40,7 @@ try {
 				oa = (String) request.getParameter("oa");
 				ea = (String) request.getParameter("ea");
 				cite = (String) request.getParameter("cite");
-				String sta = (String) request.getParameter("sta");
+				String sta = (String) request.getParameter("sta"); 
 				succ = dm.UpdateWorkDetails(wid,et, ot, ea, oa, cite, sta);
 				response.sendRedirect("Work.jsp?wid="+wid);
 			break;
@@ -55,7 +55,7 @@ try {
 				String por = (String) request.getParameter("por");
 				String lng = "1";
 				String notes = (String) request.getParameter("notes");
-				System.out.println("h "+notes);
+	//			System.out.println("h "+notes);
 				succ = dm.AddWorkPetium(wid, bt, ali, orig, tran, por, adm, lng,notes);
 				
 				response.sendRedirect("Work.jsp?wid="+wid);
@@ -72,8 +72,9 @@ try {
 				tran = (String) request.getParameter("tran");
 				String wpor = (String) request.getParameter("wpor");
 				por = (String) request.getParameter("por");
+				notes = (String) request.getParameter("notes");
 				lng = "1";
-				succ = dm.EditWorkPetium(wid, pid, bt, ali, orig, tran, wpor, por, adm, lng);
+				succ = dm.EditWorkPetium(wid, pid, bt, ali, orig, tran, wpor, por, adm, lng, notes);
 				
 				response.sendRedirect("Work.jsp?wid="+wid);
 				
@@ -82,8 +83,8 @@ try {
 			case "removePetium":
 				wid = (String) request.getParameter("wid");
 				pid = (String) request.getParameter("pid");
-
-				succ = dm.RemoveWorkPetium(pid);
+ 
+				succ = dm.RemoveWorkPetium(pid);  
 				
 				response.sendRedirect("Work.jsp?wid="+wid);
 				
